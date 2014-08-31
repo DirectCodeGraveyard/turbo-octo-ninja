@@ -18,6 +18,8 @@ void load([_]) {
   
   var repo = new RepositorySlug("dart-lang", "bleeding_edge");
   
+  querySelector("#repo").appendText(repo.fullName);
+  
   github.languages(repo).then((breakdown) {
     table.addRows(breakdown.toList());
     
@@ -36,6 +38,10 @@ void load([_]) {
     
     querySelector("#open-editor").onClick.listen((event) {
       editor.open(c);
+    });
+    
+    document.onResize.listen((e) {
+      c.draw();
     });
     
     editor.ok(([_]) {
