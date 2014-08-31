@@ -1,0 +1,10 @@
+.entire-page {
+  width: 100vh;
+  height: 100vh;
+}
+
+.center {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}

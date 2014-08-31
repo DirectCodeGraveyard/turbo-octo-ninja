@@ -1,0 +1,5 @@
+name: turbo_octo_ninja
+version: 1.0.0
+dependencies:
+  browser: any
+  github: '>=0.6.7 <1.0.0'
